@@ -3,42 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Trade UI</title>
+    <title>BTSE Trade</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
     <div class="container">
         <!-- Верхняя панель -->
         <header>
+            <div class="top-bar">
+                <i class="fa-solid fa-xmark"></i>
+                <span class="title">BTSE Trade</span>
+                <i class="fa-solid fa-gear settings"></i>
+            </div>
             <div class="balance">
                 <span>Общий баланс</span>
                 <h2>0,00$</h2>
             </div>
-            <!-- Увеличенная шестерёнка -->
-            <div class="settings-icon">
-                <i class="fa-solid fa-gear"></i>
+            <div class="actions">
+                <div class="action-btn"><i class="fa-solid fa-arrow-up"></i><span>Пополнить</span></div>
+                <div class="action-btn"><i class="fa-solid fa-arrow-down"></i><span>Вывести</span></div>
+                <div class="action-btn"><i class="fa-solid fa-arrows-rotate"></i><span>Обменять</span></div>
             </div>
         </header>
 
-        <!-- Кнопки действий -->
-        <div class="actions">
-            <div class="action-btn">
-                <i class="fa-solid fa-circle-up"></i>
-                <span>Пополнить</span>
-            </div>
-            <div class="action-btn">
-                <i class="fa-solid fa-circle-down"></i>
-                <span>Вывести</span>
-            </div>
-            <div class="action-btn">
-                <i class="fa-solid fa-circle-dollar-to-slot"></i>
-                <span>Обменять</span>
-            </div>
-        </div>
-
         <!-- Профиль -->
-        <section class="profile">
+        <section>
             <h3>Профиль</h3>
             <p>ID аккаунта: <span>7463989072</span></p>
             <p>Статистика: <span>0 / 0 / 0</span></p>
@@ -46,7 +37,7 @@
         </section>
 
         <!-- Валютные счета -->
-        <section class="accounts">
+        <section>
             <h3>Валютные счета</h3>
             <div class="currency">
                 <span>🇷🇺 Российский рубль</span>
@@ -55,33 +46,20 @@
         </section>
 
         <!-- Криптовалюты -->
-        <section class="crypto coin-list">
+        <section>
             <h3>Криптовалюты</h3>
-            <div class="coin-item">
-                <span>🟠 Bitcoin</span>
-                <span>0</span>
-            </div>
-            <div class="coin-item">
-                <span>🟢 Ethereum</span>
-                <span>0</span>
-            </div>
-            <div class="coin-item">
-                <span>🔵 Ripple</span>
-                <span>0</span>
-            </div>
-            <div class="coin-item">
-                <span>🟣 Solana</span>
-                <span>0</span>
-            </div>
-            <div class="coin-item">
-                <span>🟡 Binance Coin</span>
-                <span>0</span>
-            </div>
-            <div class="coin-item">
-                <span>🔴 Dogecoin</span>
-                <span>0</span>
-            </div>
+            <div class="crypto-item"><span>🟠 Bitcoin</span><span>0</span></div>
+            <div class="crypto-item"><span>🟢 Tether</span><span>0</span></div>
+            <div class="crypto-item"><span>🟡 BNB</span><span>0</span></div>
+            <div class="crypto-item"><span>🔵 Toncoin</span><span>0</span></div>
         </section>
     </div>
+
+    <!-- Скрипт Telegram WebApp -->
+    <script>
+        window.Telegram.WebApp.ready(); // Telegram API готов
+        const theme = Telegram.WebApp.colorScheme; // "light" или "dark"
+        document.body.classList.add(theme); // Добавляем класс для темы
+    </script>
 </body>
 </html>
