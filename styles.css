@@ -33,26 +33,32 @@ body {
 }
 
 .settings-icon {
-    font-size: 24px; /* Размер шестерёнки */
+    font-size: 24px; /* Возвращаем исходный размер шестерёнки */
     cursor: pointer;
     color: #00a878; /* Зелёный цвет шестерёнки */
+    background: none; /* Убираем фон */
     border: none; /* Убираем границы */
     outline: none; /* Убираем фокусное выделение */
-    background: none; /* Убираем фон */
     border-radius: 50%; /* Круглое выделение */
     padding: 10px;
-    transition: transform 0.3s ease, color 0.3s ease, background-color 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .settings-icon:hover {
-    color: #00d09c; /* Светлее зелёный при наведении */
     background-color: rgba(0, 168, 120, 0.2); /* Полупрозрачный круг */
+    box-shadow: 0 0 8px rgba(0, 168, 120, 0.5); /* Тень при наведении */
+    color: #00d09c; /* Светлее зелёный */
     transform: rotate(90deg); /* Вращение */
 }
 
 .settings-icon:active {
     background-color: rgba(0, 168, 120, 0.3); /* Тёмный фон */
     transform: rotate(180deg) scale(0.9); /* Вращение и уменьшение */
+    box-shadow: none; /* Убираем тень при нажатии */
+}
+
+.settings-icon:focus {
+    outline: none; /* Полностью убираем фокусное выделение */
 }
 
 /* Баланс */
@@ -116,6 +122,7 @@ body {
     text-align: center;
     user-select: none; /* Отключаем выделение текста */
 }
+
 
 
 
