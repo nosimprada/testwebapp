@@ -4,25 +4,30 @@ body {
     font-family: Arial, sans-serif;
     background-color: #121212;
     color: #fff;
+    overflow-y: scroll; /* Включаем вертикальную прокрутку */
 }
 
+/* Контейнер с фиксированной шириной */
 .container {
-    width: 300px;
-    margin: 20px auto;
+    width: 100%;
+    max-width: 400px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование по горизонтали */
     background-color: #1e1e1e;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
     padding: 15px;
 }
 
-/* Делаем header относительно позиционируемым */
+/* Верхняя панель */
 header {
-    position: relative; /* Для корректного позиционирования шестерёнки */
+    position: sticky; /* Фиксируем header при прокрутке */
+    top: 0; /* Прилипает к верху */
+    background-color: #1e1e1e;
     text-align: center;
+    z-index: 100; /* Поверх другого контента */
     border-bottom: 1px solid #333;
+    padding-top: 10px;
     padding-bottom: 10px;
-    padding-top: 20px; /* Добавляем немного отступа сверху */
 }
 
 header h1 {
@@ -39,6 +44,22 @@ header h1 {
     margin: 5px 0;
 }
 
+/* Шестерёнка в правом верхнем углу */
+.settings-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: #00a878;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.settings-icon:hover {
+    color: #00d09c;
+    transform: rotate(90deg);
+}
+
 /* Стили для кнопок действий */
 .actions {
     display: flex;
@@ -51,28 +72,28 @@ header h1 {
     flex-direction: column; /* Иконка сверху, текст снизу */
     align-items: center;
     justify-content: center;
-    color: #00a878; /* Цвет иконки и текста */
+    color: #00a878;
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .action-btn i {
-    font-size: 28px; /* Размер иконки */
-    margin-bottom: 5px; /* Отступ от текста */
+    font-size: 28px;
+    margin-bottom: 5px;
 }
 
 .action-btn span {
     font-size: 12px;
-    color: #fff; /* Белый цвет текста */
+    color: #fff;
 }
 
 .action-btn:hover i {
-    color: #00d09c; /* Изменение цвета иконки при наведении */
-    transform: scale(1.1); /* Легкое увеличение */
+    color: #00d09c;
+    transform: scale(1.1);
 }
 
-/* Секции */
+/* Секции и списки */
 section {
     margin: 15px 0;
 }
@@ -85,7 +106,7 @@ section h3 {
 .currency {
     display: flex;
     justify-content: space-between;
-    padding: 5px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #333;
 }
 
@@ -93,18 +114,19 @@ section h3 {
     font-size: 14px;
 }
 
-/* Шестерёнка в правом верхнем углу */
-.settings-icon {
-    position: absolute; /* Позиционирование относительно родителя */
-    top: 10px; /* Отступ сверху */
-    right: 10px; /* Отступ справа */
-    font-size: 18px; /* Размер иконки */
-    color: #00a878; /* Цвет шестерёнки */
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease;
+/* Список монет ниже */
+.coin-list {
+    margin-top: 20px;
 }
 
-.settings-icon:hover {
-    color: #00d09c; /* Изменение цвета при наведении */
-    transform: rotate(90deg); /* Анимация вращения */
+.coin-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #444;
 }
+
+.coin-item span {
+    font-size: 14px;
+}
+
