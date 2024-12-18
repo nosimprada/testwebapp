@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>BTSE Trade</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Подключаем библиотеку Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Подключаем Telegram WebApp API -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-    <!-- Основной контейнер -->
     <div class="container">
         <!-- Верхняя панель -->
         <header>
             <div class="top-bar">
-                <!-- Шестерёнка с анимацией -->
-                <i class="fa-solid fa-gear settings-icon" title="Настройки"></i>
+                <button class="icon-btn settings-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
             </div>
             <div class="balance">
                 <span>Общий баланс</span>
@@ -27,23 +25,18 @@
 
         <!-- Кнопки действий -->
         <div class="actions">
-            <!-- Кнопка "Пополнить" -->
             <div class="action-btn">
                 <button class="icon-btn" title="Пополнить">
                     <i class="fa-solid fa-circle-up"></i>
                 </button>
                 <span class="button-text">Пополнить</span>
             </div>
-
-            <!-- Кнопка "Вывести" -->
             <div class="action-btn">
                 <button class="icon-btn" title="Вывести">
                     <i class="fa-solid fa-circle-down"></i>
                 </button>
                 <span class="button-text">Вывести</span>
             </div>
-
-            <!-- Кнопка "Обменять" -->
             <div class="action-btn">
                 <button class="icon-btn" title="Обменять">
                     <i class="fa-solid fa-circle-dollar-to-slot"></i>
@@ -51,12 +44,39 @@
                 <span class="button-text">Обменять</span>
             </div>
         </div>
-    </div>
 
-    <!-- Подключаем скрипт -->
-    <script src="script.js"></script>
+        <!-- Профиль -->
+        <section class="profile">
+            <h3>Профиль</h3>
+            <p><strong>7463989072</strong></p>
+            <p>ID аккаунта</p>
+            <p>0 / 0 / <span class="red">0</span></p>
+            <p>Статистика</p>
+            <p>0,00 USDT</p>
+            <p>Объем торгов</p>
+        </section>
+
+        <!-- Валютные счета -->
+        <section class="accounts">
+            <h3>Валютные счета</h3>
+            <div class="account">
+                <span>₽ Российский рубль</span>
+                <span>0,00₽</span>
+            </div>
+        </section>
+
+        <!-- Криптовалюты -->
+        <section class="crypto">
+            <h3>Криптовалюты</h3>
+            <div class="crypto-item">
+                <span>🟠 Bitcoin</span>
+                <span>0</span>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
+
 
 
 
