@@ -1,15 +1,23 @@
 /* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Правильный расчёт размеров */
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #0d1b2a; /* Синий фон */
-    color: #ffffff; /* Белый цвет текста */
+    color: #ffffff; /* Белый текст */
+    overflow-x: hidden; /* Убираем горизонтальный скролл */
+    user-select: none; /* Отключаем выделение текста */
 }
 
 /* Контейнер */
 .container {
     width: 100%;
-    max-width: 500px;
+    max-width: 500px; /* Ограничение максимальной ширины */
     margin: 0 auto;
     padding: 15px;
     background-color: #1b263b; /* Тёмно-синий фон контейнера */
@@ -28,20 +36,23 @@ body {
     font-size: 24px; /* Размер шестерёнки */
     cursor: pointer;
     color: #00a878; /* Зелёный цвет шестерёнки */
-    transition: transform 0.3s ease, color 0.3s ease, background-color 0.2s ease;
+    border: none; /* Убираем границы */
+    outline: none; /* Убираем фокусное выделение */
+    background: none; /* Убираем фон */
     border-radius: 50%; /* Круглое выделение */
-    padding: 5px;
+    padding: 10px;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.2s ease;
 }
 
 .settings-icon:hover {
-    color: #00d09c; /* Светло-зелёный при наведении */
-    background-color: rgba(0, 168, 120, 0.2);
+    color: #00d09c; /* Светлее зелёный при наведении */
+    background-color: rgba(0, 168, 120, 0.2); /* Полупрозрачный круг */
     transform: rotate(90deg); /* Вращение */
 }
 
 .settings-icon:active {
-    transform: rotate(180deg) scale(0.9);
-    background-color: rgba(0, 168, 120, 0.3);
+    background-color: rgba(0, 168, 120, 0.3); /* Тёмный фон */
+    transform: rotate(180deg) scale(0.9); /* Вращение и уменьшение */
 }
 
 /* Баланс */
@@ -68,7 +79,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
 
 .icon-btn {
@@ -81,8 +91,8 @@ body {
 }
 
 .icon-btn i {
-    font-size: 36px; /* Размер иконок */
-    color: #00a878; /* Зелёный цвет значка */
+    font-size: 36px;
+    color: #00a878;
     transition: color 0.2s ease;
 }
 
@@ -97,11 +107,15 @@ body {
 }
 
 /* Текст под кнопками */
-.action-btn span {
+.button-text {
     margin-top: 5px;
-    font-size: 14px; /* Чуть больше размер текста */
-    font-weight: bold; /* Жирный текст */
-    color: #d9e2ec; /* Светло-серый цвет */
-    pointer-events: none; /* Текст не кликабелен */
+    font-size: 14px;
+    font-weight: bold;
+    color: #d9e2ec;
+    pointer-events: none;
+    text-align: center;
+    user-select: none; /* Отключаем выделение текста */
 }
+
+
 
