@@ -1,0 +1,110 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+.container {
+    width: 300px;
+    margin: 20px auto;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    padding: 15px;
+}
+
+/* Делаем header относительно позиционируемым */
+header {
+    position: relative; /* Для корректного позиционирования шестерёнки */
+    text-align: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    padding-top: 20px; /* Добавляем немного отступа сверху */
+}
+
+header h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.balance {
+    margin-top: 10px;
+}
+
+.balance h2 {
+    font-size: 22px;
+    margin: 5px 0;
+}
+
+/* Стили для кнопок действий */
+.actions {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.action-btn {
+    display: flex;
+    flex-direction: column; /* Иконка сверху, текст снизу */
+    align-items: center;
+    justify-content: center;
+    color: #00a878; /* Цвет иконки и текста */
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-btn i {
+    font-size: 28px; /* Размер иконки */
+    margin-bottom: 5px; /* Отступ от текста */
+}
+
+.action-btn span {
+    font-size: 12px;
+    color: #fff; /* Белый цвет текста */
+}
+
+.action-btn:hover i {
+    color: #00d09c; /* Изменение цвета иконки при наведении */
+    transform: scale(1.1); /* Легкое увеличение */
+}
+
+/* Секции */
+section {
+    margin: 15px 0;
+}
+
+section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.currency {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #333;
+}
+
+.currency span {
+    font-size: 14px;
+}
+
+/* Шестерёнка в правом верхнем углу */
+.settings-icon {
+    position: absolute; /* Позиционирование относительно родителя */
+    top: 10px; /* Отступ сверху */
+    right: 10px; /* Отступ справа */
+    font-size: 18px; /* Размер иконки */
+    color: #00a878; /* Цвет шестерёнки */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.settings-icon:hover {
+    color: #00d09c; /* Изменение цвета при наведении */
+    transform: rotate(90deg); /* Анимация вращения */
+}
