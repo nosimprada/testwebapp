@@ -16,7 +16,8 @@
         <!-- Верхняя панель -->
         <header>
             <div class="top-bar">
-                <i class="fa-solid fa-gear settings-icon"></i> <!-- Шестерёнка -->
+                <!-- Шестерёнка с анимацией -->
+                <i class="fa-solid fa-gear settings-icon" title="Настройки"></i>
             </div>
             <div class="balance">
                 <span>Общий баланс</span>
@@ -26,16 +27,27 @@
 
         <!-- Кнопки действий -->
         <div class="actions">
+            <!-- Кнопка "Пополнить" -->
             <div class="action-btn">
-                <i class="fa-solid fa-circle-up"></i>
+                <button class="icon-btn" title="Пополнить">
+                    <i class="fa-solid fa-circle-up"></i>
+                </button>
                 <span>Пополнить</span>
             </div>
+
+            <!-- Кнопка "Вывести" -->
             <div class="action-btn">
-                <i class="fa-solid fa-circle-down"></i>
+                <button class="icon-btn" title="Вывести">
+                    <i class="fa-solid fa-circle-down"></i>
+                </button>
                 <span>Вывести</span>
             </div>
+
+            <!-- Кнопка "Обменять" -->
             <div class="action-btn">
-                <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                <button class="icon-btn" title="Обменять">
+                    <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                </button>
                 <span>Обменять</span>
             </div>
         </div>
