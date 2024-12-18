@@ -2,8 +2,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: var(--tg-theme-bg-color, #121212);
-    color: var(--tg-theme-text-color, #ffffff);
+    background-color: #0d1b2a; /* Синий фон */
+    color: #ffffff; /* Белый цвет текста */
 }
 
 /* Контейнер */
@@ -12,7 +12,7 @@ body {
     max-width: 500px;
     margin: 0 auto;
     padding: 15px;
-    background-color: var(--tg-theme-secondary-bg-color, #1e1e1e);
+    background-color: #1b263b; /* Тёмно-синий фон контейнера */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -25,9 +25,23 @@ body {
 }
 
 .settings-icon {
-    font-size: 24px;
+    font-size: 24px; /* Размер шестерёнки */
     cursor: pointer;
-    color: var(--tg-theme-button-text-color, #00a878);
+    color: #00a878; /* Зелёный цвет шестерёнки */
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.2s ease;
+    border-radius: 50%; /* Круглое выделение */
+    padding: 5px;
+}
+
+.settings-icon:hover {
+    color: #00d09c; /* Светло-зелёный при наведении */
+    background-color: rgba(0, 168, 120, 0.2);
+    transform: rotate(90deg); /* Вращение */
+}
+
+.settings-icon:active {
+    transform: rotate(180deg) scale(0.9);
+    background-color: rgba(0, 168, 120, 0.3);
 }
 
 /* Баланс */
@@ -39,6 +53,7 @@ body {
 .balance h2 {
     font-size: 32px;
     margin: 10px 0;
+    color: #ffffff;
 }
 
 /* Кнопки действий */
@@ -52,20 +67,41 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--tg-theme-button-text-color, #00a878);
+    justify-content: center;
     cursor: pointer;
-    font-size: 14px;
 }
 
-.action-btn i {
+.icon-btn {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 50%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.icon-btn i {
     font-size: 36px; /* Размер иконок */
-    margin-bottom: 5px;
-    color: var(--tg-theme-button-text-color, #00a878);
+    color: #00a878; /* Зелёный цвет значка */
+    transition: color 0.2s ease;
 }
 
+.icon-btn:hover {
+    background-color: rgba(0, 168, 120, 0.2);
+    box-shadow: 0 0 8px rgba(0, 168, 120, 0.5);
+}
+
+.icon-btn:active {
+    background-color: rgba(0, 168, 120, 0.3);
+    transform: scale(0.9);
+}
+
+/* Текст под кнопками */
 .action-btn span {
     margin-top: 5px;
+    font-size: 14px; /* Чуть больше размер текста */
+    font-weight: bold; /* Жирный текст */
+    color: #d9e2ec; /* Светло-серый цвет */
+    pointer-events: none; /* Текст не кликабелен */
 }
-
-
 
