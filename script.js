@@ -1,16 +1,33 @@
-// Убедимся, что Telegram WebApp API загружен
-window.Telegram.WebApp.ready();
+document.addEventListener('DOMContentLoaded', () => {
+    // Находим кнопку "Скопировать ID"
+    const copyBtn = document.querySelector('.copy-btn');
 
-// Устанавливаем тему из Telegram
-function setTelegramTheme() {
-    const themeParams = window.Telegram.WebApp.themeParams;
-    document.documentElement.style.setProperty('--tg-theme-bg-color', themeParams.bg_color || '#121212');
-    document.documentElement.style.setProperty('--tg-theme-secondary-bg-color', themeParams.secondary_bg_color || '#1e1e1e');
-    document.documentElement.style.setProperty('--tg-theme-text-color', themeParams.text_color || '#ffffff');
-    document.documentElement.style.setProperty('--tg-theme-button-text-color', themeParams.button_text_color || '#00a878');
-}
+    // Находим элемент с ID пользователя
+    const userId = document.querySelector('.profile-right strong');
 
-// Инициализация темы
-setTelegramTheme();
+    // Проверяем, что элементы найдены
+    if (copyBtn && userId) {
+        copyBtn.addEventListener('click', () => {
+            // Копируем текст ID пользователя в буфер обмена
+            navigator.clipboard.writeText(userId.textContent)
+                .then(() => {
+                    // Добавляем уведомление в интерфейс
+                    const notification = document.createElement('div');
+                    notification.textContent = 'ID успешно скопирован!';
+                    notification.className = 'copy-notification';
+                    document.body.appendChild(notification);
 
+                    // Убираем уведомление через 2 секунды
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 2000);
+                })
+                .catch(err => {
+                    console.error('Ошибка при копировании: ', err);
+                });
+        });
+    } else {
+        console.error('Кнопка или элемент с ID пользователя не найдены');
+    }
+});
 
