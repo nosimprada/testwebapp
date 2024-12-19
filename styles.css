@@ -171,7 +171,7 @@ body {
     height: 70px;
     border-radius: 50%;
     border: 2px solid #04bd88;
-    margin-bottom: 10px; /* Отступ под аватаркой */
+    margin-bottom: 1px; /* Отступ под аватаркой */
 }
 
 /* Имя пользователя */
@@ -287,9 +287,6 @@ body {
     background-color: #003f7f; /* Более тёмный синий при нажатии */
     transform: scale(0.95); /* Легкое уменьшение кнопки */
 }
-
-
-
 
 
 
