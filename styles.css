@@ -159,7 +159,7 @@ body {
 }
 
 .profile-right {
-    margin-left: 40px; /* Увеличиваем расстояние между левой и правой частями */
+    margin-left: 20px; /* Увеличиваем расстояние между левой и правой частями */
     font-size: 14px;
     color: #d9e2ec;
     line-height: 1.5;
