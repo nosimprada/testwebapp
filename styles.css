@@ -256,6 +256,40 @@ body {
 }
 
 
+.user-name {
+    display: flex;
+    flex-direction: column; /* Располагаем элементы в колонку */
+    align-items: center; /* Выравниваем по центру */
+    margin-top: 10px;
+}
+
+.verification-container {
+    margin-top: 5px; /* Отступ между именем и кнопкой */
+}
+
+.verification-btn {
+    background-color: #007bff; /* Синий фон */
+    color: #ffc107; /* Желтый текст */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Закругленные углы */
+    padding: 5px 10px; /* Внутренний отступ */
+    font-size: 12px; /* Размер текста */
+    font-weight: bold; /* Жирный текст */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.2s ease, transform 0.2s ease; /* Анимация для нажатия */
+}
+
+.verification-btn:hover {
+    background-color: #0056b3; /* Темно-синий при наведении */
+}
+
+.verification-btn:active {
+    background-color: #003f7f; /* Более тёмный синий при нажатии */
+    transform: scale(0.95); /* Легкое уменьшение кнопки */
+}
+
+
+
 
 
 
