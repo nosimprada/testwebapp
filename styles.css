@@ -70,7 +70,7 @@ body {
 }
 
 .overall-balance h2 {
-    font-size: 55px;
+    font-size: 35px;
     font-weight: bold;
     margin-top: 5px;
 }
@@ -81,7 +81,7 @@ body {
     display: flex;
     justify-content: center; /* Центрируем кнопки */
     gap: 5px; /* Расстояние между кнопками */
-    margin-top: 15px;
+    margin-top: 5px;
 }   
 
 .action-btn {
@@ -114,12 +114,86 @@ body {
 }
 
 .button-text {
-    margin-top: 3px;
+    margin-top: 1px;
     font-size: 12px;
     font-weight: bold;
     color: #04bd88;
     text-align: center;
 }
+
+
+.divider {
+    height: 1px; /* Толщина линии */
+    background-color: #979696; /* Цвет линии */
+    margin: 20px 0; /* Отступ сверху и снизу */
+    width: 100%; /* Линия занимает всю ширину контейнера */
+}
+
+
+
+/* Профиль */
+.profile {
+    margin-top: 1px;
+    padding: 10px;
+}
+
+.profile h3 {
+    text-align: center;
+    color: #04bd88;
+    margin-bottom: 10px;
+}
+
+/* Контейнер для профиля */
+.profile-info {
+    display: flex;
+    justify-content: flex-start; /* Выравниваем элементы по началу */
+    align-items: center;
+}
+
+/* Левая часть: аватарка и имя */
+.profile-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-right {
+    margin-left: 40px; /* Увеличиваем расстояние между левой и правой частями */
+    font-size: 14px;
+    color: #d9e2ec;
+    line-height: 1.5;
+}
+
+/* Аватарка */
+.avatar img {
+    width: 70px; /* Увеличенный размер аватарки */
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #04bd88;
+    margin-bottom: 10px; /* Отступ под аватаркой */
+}
+
+/* Имя пользователя */
+.user-name span {
+    font-size: 18px; /* Увеличенный размер имени */
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Правая часть: текстовая информация */
+.profile-right p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #d9e2ec;
+    line-height: 1.5;
+}
+
+.profile-right .stats {
+    color: #ff0000; /* Красный цвет для статистики */
+}
+
 
 
 
