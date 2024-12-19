@@ -268,8 +268,8 @@ body {
 }
 
 .verification-btn {
-    background-color: #007bff; /* Синий фон */
-    color: #ffc107; /* Желтый текст */
+    background-color: #ffc107; /* Синий фон */
+    color: #0d1b2a; /* Желтый текст */
     border: none; /* Убираем границу */
     border-radius: 5px; /* Закругленные углы */
     padding: 5px 10px; /* Внутренний отступ */
