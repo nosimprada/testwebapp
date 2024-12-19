@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(() => {
                     // Добавляем уведомление в интерфейс
                     const notification = document.createElement('div');
-                    notification.textContent = 'ID успешно скопирован!';
+                    notification.textContent = 'ID скопирован!';
                     notification.className = 'copy-notification';
                     document.body.appendChild(notification);
 
@@ -30,4 +30,3 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Кнопка или элемент с ID пользователя не найдены');
     }
 });
-
