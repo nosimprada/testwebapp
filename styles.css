@@ -213,6 +213,7 @@ body {
     color: #04bd88; /* Цвет кнопки */
     margin-left: 2px; /* Отступ от ID */
     transition: color 0.2s ease;
+    outline: none; /* Убираем синий контур */
 }
 
 .copy-btn:hover {
@@ -277,6 +278,7 @@ body {
     font-weight: bold; /* Жирный текст */
     cursor: pointer; /* Указатель при наведении */
     transition: background-color 0.2s ease, transform 0.2s ease; /* Анимация для нажатия */
+    outline: none; /* Убираем синий контур */
 }
 
 .verification-btn:hover {
@@ -325,6 +327,7 @@ body {
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.2s ease;
+    outline: none; /* Убираем синий контур */
 }
 
 /* Иконка валюты */
@@ -357,24 +360,6 @@ body {
     background-color: rgba(0, 168, 120, 0.3);
 }
 
-/* Сбрасываем стандартные стили кнопок */
-button {
-    border: none;
-    background: none;
-    outline: none;
-    cursor: pointer;
-}
 
-/* Общий стиль для кнопок */
-button:focus {
-    outline: none; /* Убираем фокусное выделение */
-}
-
-
-/* Стиль при нажатии */
-button:active {
-    transform: scale(0.9); /* Легкое уменьшение кнопки */
-    background-color: rgba(0, 168, 120, 0.3);
-}
 
 
