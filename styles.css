@@ -363,3 +363,144 @@ body {
 
 
 
+
+/* Секция криптовалют */
+.crypto-section {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.crypto-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #979696; /* Серый цвет текста */
+    font-size: 14px; /* Размер шрифта */
+    font-weight: bold;
+}
+
+/* Кнопка скрытия/показа балансов */
+.toggle-balances-btn {
+    background-color: #04bd88; /* Зеленый фон */
+    color: #ffffff; /* Белый текст */
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.toggle-balances-btn:hover {
+    background-color: #03a873;
+}
+
+.toggle-balances-btn:active {
+    transform: scale(0.95);
+}
+
+/* Список криптовалют */
+.crypto-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Кнопка криптовалюты */
+.crypto-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #1b263b;
+    border: 1px solid #04bd88;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.crypto-item:hover {
+    background-color: rgba(0, 168, 120, 0.2);
+}
+
+.crypto-item:active {
+    transform: scale(0.98);
+}
+
+/* Иконка криптовалюты */
+.crypto-item img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+/* Название и баланс криптовалюты */
+.crypto-item span {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #d9e2ec;
+    font-weight: bold;
+}
+
+.crypto-item strong {
+    color: #ffffff;
+}
+
+
+
+
+
+/* Закрепленная плашка внизу */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1b263b;
+    padding: 10px 0;
+    border-top: 1px solid #04bd88;
+    z-index: 1000;
+}
+
+/* Кнопки табов */
+.tab-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #979696; /* Серый текст для неактивной вкладки */
+    font-size: 12px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.tab-btn i {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.tab-btn.active {
+    color: #04bd88; /* Зеленый текст для активной вкладки */
+}
+
+.tab-btn:hover {
+    transform: scale(1.1); /* Легкое увеличение при наведении */
+}
+
+.tab-btn:active {
+    transform: scale(0.95); /* Легкое уменьшение при нажатии */
+}
+
+
+
+
