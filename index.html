@@ -18,7 +18,7 @@
         </header>
         <!-- Профиль -->
         <div class="profile">
-            <h3>Профиль</h3>
+            <h3>Личный кабинет</h3>
             <div class="profile-info">
                 <!-- Левая часть: аватарка и ФИО -->
                 <div class="profile-left">
@@ -26,12 +26,17 @@
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3kdBNOqTwpVsmgnGronRGnwjYaD_UVQkbnQ&s" alt="Avatar">
                     </div>
                     <div class="user-name">
-                        <span>Иван Иванов</span>
+                        <span>Иван Иванов <i class="fa-solid fa-circle-check verified-icon" title="Аккаунт верифицирован"></i></span>
                     </div>
                 </div>
                 <!-- Правая часть: текстовая информация -->
                 <div class="profile-right">
-                    <p>ID аккаунта: <strong>7463989072</strong></p>
+                    <p>
+                        ID аккаунта: <strong>7463989072</strong>
+                        <button class="copy-btn" title="Скопировать ID">
+                            <i class="fa-solid fa-copy"></i>
+                        </button>
+                    </p>
                     <p>Статистика: <span class="stats">0 / 0 / 0</span></p>
                     <p>Объем торгов: <strong>0,00 USDT</strong></p>
                     <p>Регистрация: <strong>1 мес.</strong></p> <!-- Новая строка -->
@@ -67,9 +72,9 @@
         <div class="divider"></div>
         
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
-
 
 
 
