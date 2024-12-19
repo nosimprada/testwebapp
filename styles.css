@@ -290,5 +290,74 @@ body {
 
 
 
+/* Секция валютные счета */
+.currency-section {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.currency-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #979696; /* Серый цвет текста */
+    font-size: 14px; /* Размер шрифта */
+    font-weight: bold;
+}
+
+/* Контейнер для списка валют */
+.currency-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Расстояние между кнопками */
+
+}
+
+/* Кнопки для валют */
+.currency-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #1b263b; /* Темный фон */
+    border: 1px solid #04bd88; /* Зеленая рамка */
+    border-radius: 8px;
+    color: #ffffff; /* Белый текст */
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Иконка валюты */
+.currency-item i {
+    font-size: 20px;
+    color: #04bd88; /* Зеленый цвет иконки */
+    margin-right: 10px;
+}
+
+/* Название и значение валюты */
+.currency-item span {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #d9e2ec;
+    font-weight: bolder;
+}
+
+.currency-item strong {
+    font-size: 14px;
+    color: #ffffff; /* Белый цвет суммы */
+}
+
+/* Эффект при наведении */
+.currency-item:hover {
+    background-color: rgba(0, 168, 120, 0.2);
+}
+
+.currency-item:active {
+    transform: scale(0.98); /* Легкое уменьшение кнопки */
+    background-color: rgba(0, 168, 120, 0.3);
+}
+
+
+
 
 
