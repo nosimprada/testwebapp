@@ -11,7 +11,7 @@ body {
     user-select: none; /* Отключаем выделение текста */
 }
 
-.main-conteiner {
+.main-container {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
@@ -59,6 +59,7 @@ body {
 .overall-balance span {
     color: #82868a; /* Серый цвет текста */
     font-size: 14px; /* Размер шрифта */
+    font-weight: bold;
 }
 
 .overall-balance h2 {
@@ -123,6 +124,182 @@ body {
     background-color: #313b43; /* Цвет линии (серый) */
     margin: 10px 0; /* Отступ сверху и снизу */
     opacity: 0.6; /* Прозрачность для более мягкого вида */
+}
+
+
+.profile-container {
+    padding-left: 15px; /* Отступ от левой границы */
+}
+
+
+.profile {
+    display: flex;
+    align-items: center; /* Центрируем элементы по вертикали */
+    gap: 8px; /* Расстояние между элементами */
+}
+
+.profile span {
+    font-size: 14px; /* Размер текста */
+    font-weight: bold; /* Жирный текст */
+    color: #3fc1b0; /* Белый цвет текста */
+}
+
+.profile i {
+    font-size: 18px; /* Размер иконок */
+    color: #3fc1b0; /* Зеленый цвет для иконки проверки */
+}
+
+.profile i.fa-circle-exclamation {
+    color: #ffc107; /* Желтый цвет для иконки предупреждения */
+}
+
+/* Стили для ID и подписи */
+.account-id {
+    margin-top: 10px; /* Отступ сверху от значков */
+}
+
+.id-number {
+    font-size: 18px; /* Размер текста для ID */
+    font-weight: bold; /* Жирный текст для ID */
+    color: #ffffff; /* Белый цвет текста */
+}
+
+.id-label {
+    margin-top: 3px;
+    font-size: 14px; /* Размер текста для подписи */
+    color: #82868a; /* Серый цвет для подписи */
+    font-weight: bold;
+}
+
+
+.id-container {
+    display: flex;
+    align-items: center; /* Выравниваем элементы по вертикали */
+    gap: 5px; /* Отступ между ID и кнопкой */
+}
+
+.copy-btn {
+    border: none;
+    background: none;
+    color: #3fc1b0; /* Зеленый цвет кнопки */
+    transition: color 0.2s ease;
+}
+
+.copy-btn i {
+    font-size: 14px;
+}
+
+.copy-btn:hover {
+    color: #00d09c; /* Более яркий зеленый цвет при наведении */
+}
+
+.copy-btn:active {
+    transform: scale(0.9); /* Легкое уменьшение при нажатии */
+}
+
+/* Уведомление */
+.copy-notification {
+    position: fixed;
+    top: 20px; /* Расположить в верхней части */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3fc1b0;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    z-index: 1000;
+    animation: fade-in-out 2s ease; /* Анимация появления и исчезновения */
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    10%, 90% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+}
+
+
+
+.stats-container {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 18px;
+    color: #d9e2ec; /* Основной цвет текста */
+}
+
+.stats-all {
+    color: #ffffff; /* Белый цвет */
+    font-weight: bold;
+}
+
+.stats-win {
+    color: #04bd88; /* Зеленый цвет для прибыльных */
+    font-weight: bold;
+}
+
+.stats-loss {
+    color: #ff0000; /* Красный цвет для убыточных */
+    font-weight: bold;
+}
+
+.stats-label {
+    margin-top: 3px;
+    color: #82868a; /* Серый цвет текста подписи */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.info-btn {
+    border: none;
+    background: none;
+    color: #3fc1b0; /* Цвет кнопки */
+    margin-left: 5px; /* Отступ от статистики */
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.info-btn i {
+    font-size: 18px; /* Размер иконки */
+}
+
+.info-btn:hover {
+    color: #3fc1b0; /* Цвет при наведении */
+}
+
+.info-btn:active {
+    transform: scale(0.9); /* Легкое уменьшение при нажатии */
+}
+
+
+.trade-volume-container {
+    margin-top: 10px; /* Отступ сверху */
+    text-align: left; /* Выравнивание текста по левому краю */
+    font-size: 18px;
+    color: #d9e2ec; /* Основной цвет текста */
+}
+
+.trade-volume-amount {
+    font-size: 18px; /* Размер текста для объема */
+    font-weight: bold; /* Жирный текст */
+    color: #ffffff; /* Белый цвет */
+    margin: 0; /* Убираем отступы */
+}
+
+.trade-volume-label {
+    margin-top: 3px; /* Отступ между суммой и текстом */
+    font-size: 14px; /* Размер текста для подписи */
+    color: #82868a; /* Серый цвет для подписи */
+    font-weight: bold;
 }
 
 
