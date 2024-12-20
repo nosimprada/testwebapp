@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="main-conteiner">
+    <div class="main-container">
+        <!-- Верхняя панель -->
         <header>
             <div class="top-bar">
                 <button class="settings-icon">
@@ -16,24 +17,69 @@
                 </button>
             </div>
         </header>
+        
+        <!-- Общий баланс -->
         <div class="overall-balance">
             <span>Общий баланс</span>
             <h2>150,00$</h2>
         </div>
+
         <!-- Кнопки действий -->
         <div class="main-actions">
             <button class="icon-btn" title="Пополнить">
-                <i class="fa-solid fa-circle-up"></i>
+                <i class="fa-solid fa-circle-arrow-up"></i>
                 <span>Пополнить</span>
             </button>
             <button class="icon-btn" title="Вывести">
-                <i class="fa-solid fa-circle-down"></i>
+                <i class="fa-solid fa-circle-arrow-down"></i>
                 <span>Вывести</span>
             </button>
             <button class="icon-btn" title="Обменять">
                 <i class="fa-solid fa-circle-dollar-to-slot"></i>
                 <span>Обменять</span>
             </button>
+        </div>
+
+        <!-- Разделитель -->
+        <div class="divider"></div>
+
+        <!-- Профиль -->
+        <div class="profile-container">
+            <div class="profile">
+                <span>Профиль</span>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
+
+            <!-- ID аккаунта -->
+            <div class="account-id">
+                <div class="id-container">
+                    <p class="id-number">7463989072</p>
+                    <button class="copy-btn" title="Скопировать ID">
+                        <i class="fa-solid fa-copy"></i>
+                    </button>
+                </div>
+                <p class="id-label">ID аккаунта</p>
+            </div>
+
+            <!-- Статистика -->
+            <div class="stats-container">
+                <div class="stats">
+                    <p>
+                        <span class="stats-all">0</span> /
+                        <span class="stats-win">0</span> /
+                        <span class="stats-loss">0</span>
+                        <button class="info-btn" title="Подробнее о статистике">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                    </p>
+                    <p class="stats-label">Статистика</p>
+                </div>
+            </div>
+            <div class="trade-volume-container">
+                <p class="trade-volume-amount">0,00 USDT</p>
+                <p class="trade-volume-label">Объём торгов</p>
+            </div>
         </div>
         <div class="divider"></div>
     </div>
