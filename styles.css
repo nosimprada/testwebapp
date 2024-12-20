@@ -4,30 +4,22 @@
     box-sizing: border-box;
 }
 
-
-
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     background-color: #0d1b2a; /* Синий фон */
-    color: #ffffff; /* Белый текст */
     overflow-x: hidden; /* Убираем горизонтальный скролл */
     user-select: none; /* Отключаем выделение текста */
 }
 
-
-/* Контейнер общий*/
-.container-setting {
+.main-conteiner {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
     padding: 10px;
-    background-color: #1b263b;
-    border-radius: 10px;
-    padding-bottom: 40px; /* Отступ для нижней панели */
+    background-color: #282e33;
 }
 
-/* Кнопка смены языка (Шестерня) */
+
 .top-bar {
     display: flex;
     justify-content: flex-end;  
@@ -38,13 +30,13 @@ body {
     border: none;
     background: none;
     padding: 8px;
-    border-radius: 50%;
+    border-radius: 20%;
 }
 
 
 .settings-icon i {
     font-size: 24px;
-    color: #dadbdb;
+    color: #ffffff;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
@@ -58,21 +50,21 @@ body {
 }
 
 
+
 /* Общий баланс $ */
 .overall-balance {
     text-align: center;
 }
 
 .overall-balance span {
-    color: #979696; /* Серый цвет текста */
+    color: #82868a; /* Серый цвет текста */
     font-size: 14px; /* Размер шрифта */
-    font-weight: bold;
 }
 
 .overall-balance h2 {
+    color: #ffffff;
     font-size: 35px;
-    font-weight: bold;
-    margin-top: 5px;
+    margin-top: 1px;
 }
 
 
@@ -80,425 +72,57 @@ body {
 .main-actions {
     display: flex;
     justify-content: center; /* Центрируем кнопки */
-    gap: 5px; /* Расстояние между кнопками */
+    gap: 10px; /* Расстояние между кнопками */
     margin-top: 5px;
-}   
+}
 
 .action-btn {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin: 0 10px;
+    justify-content: center;
 }
 
 .icon-btn {
     border: none;
     background: none;
-    padding: 8px;
-    border-radius: 50%;
+    padding: 10px 15px; /* Внутренний отступ */
+    border-radius: 15px; /* Скруглённые углы */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     transition: background-color 0.2s ease, transform 0.2s ease;
+    color: #3fc1b0;
 }
 
 .icon-btn i {
-    font-size: 35px;
-    color: #04bd88;
+    font-size: 35px; /* Размер иконки */
+    color: #3fc1b0;
+    margin-bottom: 5px; /* Отступ между иконкой и текстом */
+}
+
+.icon-btn span {
+    font-size: 14px; /* Размер текста */
+    color: #3fc1b0;
+    font-weight: bold;
+    text-align: center;
 }
 
 .icon-btn:hover {
     background-color: rgba(0, 168, 120, 0.2);
+    transform: scale(1.05); /* Лёгкое увеличение при наведении */
 }
 
 .icon-btn:active {
     background-color: rgba(0, 168, 120, 0.3);
-    transform: scale(0.9);
+    transform: scale(0.95); /* Лёгкое уменьшение при нажатии */
 }
-
-.button-text {
-    margin-top: 1px;
-    font-size: 12px;
-    font-weight: bold;
-    color: #04bd88;
-    text-align: center;
-}
-
 
 .divider {
-    height: 1px; /* Толщина линии */
-    background-color: #979696; /* Цвет линии */
-    margin: 20px 0; /* Отступ сверху и снизу */
-    width: 100%; /* Линия занимает всю ширину контейнера */
-}
-
-
-
-/* Профиль */
-.profile {
-    margin-top: 1px;
-    padding: 10px;
-}
-
-.profile h3 {
-    text-align: center;
-    color: #04bd88;
-    margin-bottom: 10px;
-}
-
-/* Контейнер для профиля */
-.profile-info {
-    display: flex;
-    justify-content: flex-start; /* Выравниваем элементы по началу */
-    align-items: center;
-}
-
-/* Левая часть: аватарка и имя */
-.profile-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.profile-right {
-    margin-left: 20px; /* Увеличиваем расстояние между левой и правой частями */
-    font-size: 14px;
-    color: #d9e2ec;
-    line-height: 1.5;
-}
-
-/* Аватарка */
-.avatar img {
-    width: 70px; /* Увеличенный размер аватарки */
-    height: 70px;
-    border-radius: 50%;
-    border: 2px solid #04bd88;
-    margin-bottom: 1px; /* Отступ под аватаркой */
-}
-
-/* Имя пользователя */
-.user-name span {
-    font-size: 18px; /* Увеличенный размер имени */
-    color: #ffffff;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* Правая часть: текстовая информация */
-.profile-right p {
-    margin: 5px 0;
-    font-size: 14px;
-    color: #d9e2ec;
-    line-height: 1.5;
-}
-
-.profile-right .stats {
-    color: #ffc107; /* Красный цвет для статистики */
-}
-
-
-
-/* Значок верификации */
-.verified-icon {
-    color: #04bd88; /* Зеленый цвет значка */
-    font-size: 20px; /* Размер значка */
-    margin-left: 1px; /* Отступ от имени */
-    vertical-align: middle; /* Выравнивание по середине текста */
-}
-
-
-/* Кнопка копирования */
-.copy-btn {
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: #04bd88; /* Цвет кнопки */
-    margin-left: 2px; /* Отступ от ID */
-    transition: color 0.2s ease;
-    outline: none; /* Убираем синий контур */
-}
-
-.copy-btn:hover {
-    color: #00d09c; /* Цвет при наведении */
-}
-
-.copy-btn:active {
-    transform: scale(0.9); /* Эффект уменьшения при нажатии */
-}
-
-
-.copy-notification {
-    position: fixed;
-    top: 20px; /* Устанавливаем отступ сверху */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #04bd88;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    font-size: 14px;
-    z-index: 1000;
-    animation: fade-in-out 2s ease; /* Анимация появления и исчезновения */
-}
-
-/* Анимация появления и исчезновения */
-@keyframes fade-in-out {
-    0% {
-        opacity: 0;
-        transform: translateX(-50%) translateY(-20px); /* Сдвиг вверх в начале */
-    }
-    10%, 90% {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0); /* Нормальное положение */
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(-50%) translateY(-20px); /* Сдвиг вверх при исчезновении */
-    }
-}
-
-
-.user-name {
-    display: flex;
-    flex-direction: column; /* Располагаем элементы в колонку */
-    align-items: center; /* Выравниваем по центру */
-    margin-top: 10px;
-}
-
-.verification-container {
-    margin-top: 5px; /* Отступ между именем и кнопкой */
-}
-
-.verification-btn {
-    background-color: #ffc107; /* Синий фон */
-    color: #0d1b2a; /* Желтый текст */
-    border: none; /* Убираем границу */
-    border-radius: 5px; /* Закругленные углы */
-    padding: 5px 10px; /* Внутренний отступ */
-    font-size: 12px; /* Размер текста */
-    font-weight: bold; /* Жирный текст */
-    cursor: pointer; /* Указатель при наведении */
-    transition: background-color 0.2s ease, transform 0.2s ease; /* Анимация для нажатия */
-    outline: none; /* Убираем синий контур */
-}
-
-.verification-btn:hover {
-    background-color: #0056b3; /* Темно-синий при наведении */
-}
-
-.verification-btn:active {
-    background-color: #003f7f; /* Более тёмный синий при нажатии */
-    transform: scale(0.95); /* Легкое уменьшение кнопки */
-}
-
-
-
-/* Секция валютные счета */
-.currency-section {
-    margin-top: 20px;
-    padding: 10px;
-}
-
-.currency-section h3 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #979696; /* Серый цвет текста */
-    font-size: 14px; /* Размер шрифта */
-    font-weight: bold;
-}
-
-/* Контейнер для списка валют */
-.currency-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Расстояние между кнопками */
-
-}
-
-/* Кнопки для валют */
-.currency-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #1b263b; /* Темный фон */
-    border: 1px solid #04bd88; /* Зеленая рамка */
-    border-radius: 8px;
-    color: #ffffff; /* Белый текст */
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-    outline: none; /* Убираем синий контур */
-}
-
-/* Иконка валюты */
-.currency-item i {
-    font-size: 20px;
-    color: #04bd88; /* Зеленый цвет иконки */
-    margin-right: 10px;
-}
-
-/* Название и значение валюты */
-.currency-item span {
-    flex-grow: 1;
-    font-size: 14px;
-    color: #d9e2ec;
-    font-weight: bolder;
-}
-
-.currency-item strong {
-    font-size: 14px;
-    color: #ffffff; /* Белый цвет суммы */
-}
-
-/* Эффект при наведении */
-.currency-item:hover {
-    background-color: rgba(0, 168, 120, 0.2);
-}
-
-.currency-item:active {
-    transform: scale(0.98); /* Легкое уменьшение кнопки */
-    background-color: rgba(0, 168, 120, 0.3);
-}
-
-
-
-
-
-/* Секция криптовалют */
-.crypto-section {
-    margin-top: 20px;
-    padding: 10px;
-}
-
-.crypto-section h3 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #979696; /* Серый цвет текста */
-    font-size: 14px; /* Размер шрифта */
-    font-weight: bold;
-}
-
-/* Кнопка скрытия/показа балансов */
-.toggle-balances-btn {
-    background-color: #04bd88; /* Зеленый фон */
-    color: #ffffff; /* Белый текст */
-    border: none;
-    border-radius: 5px;
-    padding: 8px 15px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-bottom: 10px;
-    display: block;
-    width: 100%;
-    text-align: center;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.toggle-balances-btn:hover {
-    background-color: #03a873;
-}
-
-.toggle-balances-btn:active {
-    transform: scale(0.95);
-}
-
-/* Список криптовалют */
-.crypto-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/* Кнопка криптовалюты */
-.crypto-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #1b263b;
-    border: 1px solid #04bd88;
-    border-radius: 8px;
-    color: #ffffff;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.crypto-item:hover {
-    background-color: rgba(0, 168, 120, 0.2);
-}
-
-.crypto-item:active {
-    transform: scale(0.98);
-}
-
-/* Иконка криптовалюты */
-.crypto-item img {
-    width: 32px;
-    height: 32px;
-    margin-right: 10px;
-}
-
-/* Название и баланс криптовалюты */
-.crypto-item span {
-    flex-grow: 1;
-    font-size: 14px;
-    color: #d9e2ec;
-    font-weight: bold;
-}
-
-.crypto-item strong {
-    color: #ffffff;
-}
-
-
-
-
-
-/* Закрепленная плашка внизу */
-.bottom-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #1b263b;
-    padding: 10px 0;
-    border-top: 1px solid #04bd88;
-    z-index: 1000;
-}
-
-/* Кнопки табов */
-.tab-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #979696; /* Серый текст для неактивной вкладки */
-    font-size: 12px;
-    transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.tab-btn i {
-    font-size: 20px;
-    margin-bottom: 5px;
-}
-
-.tab-btn.active {
-    color: #04bd88; /* Зеленый текст для активной вкладки */
-}
-
-.tab-btn:hover {
-    transform: scale(1.1); /* Легкое увеличение при наведении */
-}
-
-.tab-btn:active {
-    transform: scale(0.95); /* Легкое уменьшение при нажатии */
+    width: 100%; /* Занимает всю ширину контейнера */
+    height: 7px; /* Толщина линии */
+    background-color: #313b43; /* Цвет линии (серый) */
+    margin: 10px 0; /* Отступ сверху и снизу */
+    opacity: 0.6; /* Прозрачность для более мягкого вида */
 }
 
 
