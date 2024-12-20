@@ -8,109 +8,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="container-setting">
+    <div class="main-conteiner">
         <header>
             <div class="top-bar">
                 <button class="settings-icon">
-                    <i class="fa-solid fa-gear"></i>
+                    <i class="fa-solid fa-language"></i>
                 </button>
             </div>
         </header>
-        <!-- Профиль -->
-        <div class="profile">
-            <h3>Личный кабинет</h3>
-            <div class="profile-info">
-                <!-- Левая часть: аватарка и ФИО -->
-                <div class="profile-left">
-                    <div class="avatar">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3kdBNOqTwpVsmgnGronRGnwjYaD_UVQkbnQ&s" alt="Avatar">
-                    </div>
-                    <div class="user-name">
-                        <span>Станислав И. <i class="fa-solid fa-circle-check verified-icon" title="Аккаунт верифицирован"></i></span>
-                        <div class="verification-container">
-                            <button class="verification-btn">ВЕРИФИКАЦИЯ</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Правая часть: текстовая информация -->
-                <div class="profile-right">
-                    <p>
-                        ID аккаунта: <strong>7463989072</strong>
-                        <button class="copy-btn" title="Скопировать ID">
-                            <i class="fa-solid fa-copy"></i>
-                        </button>
-                    </p>
-                    <p>Статистика: <span class="stats">0 / 0 / 0</span></p>
-                    <p>Объем торгов: <strong>0,00 USDT</strong></p>
-                    <p>Регистрация: <strong>1 мес.</strong></p> <!-- Новая строка -->
-                </div>
-            </div>
-        </div>
-        <div class="divider"></div>
         <div class="overall-balance">
             <span>Общий баланс</span>
             <h2>150,00$</h2>
         </div>
         <!-- Кнопки действий -->
         <div class="main-actions">
-            <div class="action-btn">
-                <button class="icon-btn" title="Пополнить">
-                    <i class="fa-solid fa-circle-up"></i>
-                </button>
-                <span class="button-text">Пополнить</span>
-            </div>
-            <div class="action-btn">
-                <button class="icon-btn" title="Вывести">
-                    <i class="fa-solid fa-circle-down"></i>
-                </button>
-                <span class="button-text">Вывести</span>
-            </div>
-            <div class="action-btn">
-                <button class="icon-btn" title="Обменять">
-                    <i class="fa-solid fa-circle-dollar-to-slot"></i>
-                </button>
-                <span class="button-text">Обменять</span>
-            </div>
-        </div>
-        <div class="divider"></div>
-        <div class="currency-section">
-            <h3>Валютные счета</h3>
-            <div class="currency-list">
-                <!-- Кнопка для рубля -->
-                <button class="currency-item">
-                    <i class="fa-solid fa-ruble-sign"></i>
-                    <span>Российский рубль</span>
-                    <strong>0,00₽</strong>
-                </button>
-                <!-- Кнопка для доллара -->
-                <button class="currency-item">
-                    <i class="fa-solid fa-dollar-sign"></i>
-                    <span>Американский доллар</span>
-                    <strong>0,00$</strong>
-                </button>
-            </div>
-        </div>
-        <div class="divider"></div>
-        <div class="crypto-section">
-            <h3>Криптовалюты</h3>
-            <button class="toggle-balances-btn" id="toggleBalances">
-                Скрыть пустые балансы <i class="fa-solid fa-eye-slash"></i>
+            <button class="icon-btn" title="Пополнить">
+                <i class="fa-solid fa-circle-up"></i>
+                <span>Пополнить</span>
             </button>
-            <div class="crypto-list" id="cryptoList">
-                <!-- Здесь через JS будут выводиться криптовалюты -->
-            </div>
-        </div>
-        <div class="divider"></div>
-        <div class="bottom-bar">
-            <button class="tab-btn active">
-                <i class="fa-solid fa-coins"></i>
-                <span>Активы</span>
+            <button class="icon-btn" title="Вывести">
+                <i class="fa-solid fa-circle-down"></i>
+                <span>Вывести</span>
             </button>
-            <button class="tab-btn">
-                <i class="fa-solid fa-chart-line"></i>
-                <span>Торговля</span>
+            <button class="icon-btn" title="Обменять">
+                <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                <span>Обменять</span>
             </button>
         </div>
+        <div class="divider"></div>
     </div>
     <script src="script.js"></script>
 </body>
