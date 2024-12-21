@@ -409,4 +409,164 @@ body {
 }
 
 
+/* Секция криптовалют */
+.crypto-section {
+    padding-left: 15px; /* Отступ от левой границы */
+    padding-right: 15px;
+}
+
+/* Заголовок секции */
+.crypto-title-container {
+    display: flex;
+    justify-content: space-between; /* Разделяем заголовок и кнопку */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.crypto-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #3fc1b0; /* Зеленый цвет */
+}
+
+/* Кнопка скрытия/показа балансов */
+.toggle-balances-btn {
+    background: none; /* Убираем фон */
+    color: #82868a; /* Зеленый текст */
+    border: none; /* Убираем рамку */
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.toggle-balances-btn:hover {
+    color: #03a873; /* Более яркий зеленый при наведении */
+}
+
+/* Список криптовалют */
+.crypto-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Элемент криптовалюты */
+.crypto-item {
+    position: relative; /* Для псевдоэлемента */
+    display: flex;
+    justify-content: space-between; /* Название и сумма по краям */
+    align-items: center;
+    padding: 10px 0;
+    transition: background-color 0.2s ease;
+    border-radius: 15px; /* Закругленные углы */
+    z-index: 1; /* Для корректного отображения псевдоэлемента */
+}
+
+.crypto-item:focus-within::before,
+.crypto-item:hover::before {
+    content: ""; /* Пустой псевдоэлемент для выделения */
+    position: absolute;
+    top: 0;
+    left: -15px; /* Уходим за пределы родителя, чтобы покрыть всю ширину */
+    width: calc(100% + 30px); /* Покрываем всю ширину, включая отступы */
+    height: 100%;
+    background-color: rgba(63, 193, 176, 0.2); /* Цвет выделения */
+    z-index: -1; /* Псевдоэлемент под основным содержимым */
+    border-radius: 15px; /* Закругленные углы */
+}
+
+/* Информация о криптовалюте */
+.crypto-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Зелёный круг с символом */
+.crypto-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Размер круга */
+    height: 40px;
+    border-radius: 50%;
+    background-color: #04bd88;
+    color: #ffffff;
+    font-size: 20px; /* Размер символа */
+}
+
+/* Название криптовалюты */
+.crypto-name {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Курс криптовалюты */
+.crypto-rate {
+    font-size: 14px;
+    color: #82868a;
+    margin-top: 2px;
+    font-weight: normal;
+}
+
+/* Сумма криптовалюты */
+.crypto-amount {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Значение в долларах */
+.crypto-usd-value {
+    font-size: 14px;
+    color: #82868a; /* Серый цвет */
+    text-align: right;
+}
+
+
+/* Закрепленная плашка внизу */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #282e33;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+/* Кнопки табов */
+.tab-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #82868a; /* Серый текст для неактивной вкладки */
+    font-size: 12px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.tab-btn i {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.tab-btn.active {
+    color: #3fc1b0; /* Зеленый текст для активной вкладки */
+}
+
+.tab-btn:hover {
+    transform: scale(1.1); /* Легкое увеличение при наведении */
+}
+
+.tab-btn:active {
+    transform: scale(0.95); /* Легкое уменьшение при нажатии */
+}
 
