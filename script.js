@@ -1,10 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Копирование ID в буфер обмена
+    // Заставка
+    const preloader = document.getElementById('preloader');
+    const mainContainer = document.querySelector('.main-container');
+
+    // Убираем заставку после 5 секунд
+    setTimeout(() => {
+        preloader.style.opacity = '0'; // Исчезновение
+        setTimeout(() => {
+            preloader.style.display = 'none'; // Убираем из DOM
+            mainContainer.style.display = 'block'; // Показываем основной контент
+        }, 500); // Плавное исчезновение
+    }, 5000); // Минимальное время загрузки
+
+    // Копирование ID
     const copyBtn = document.querySelector('.copy-btn');
     const userId = document.querySelector('.id-number').textContent;
 
     copyBtn.addEventListener('click', () => {
-        // Копируем текст в буфер обмена
         navigator.clipboard.writeText(userId).then(() => {
             showCopyNotification('ID скопирован!');
         }).catch(err => {
@@ -12,23 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Функция для отображения уведомления
+    // Уведомление о копировании
     function showCopyNotification(message) {
         const notification = document.createElement('div');
         notification.className = 'copy-notification';
         notification.textContent = message;
         document.body.appendChild(notification);
 
-        // Удаляем уведомление через 2 секунды
         setTimeout(() => {
             notification.remove();
         }, 2000);
     }
-});
 
-
-
-document.addEventListener('DOMContentLoaded', () => {
+    // Криптовалюты
     const cryptoData = [
         { name: 'Bitcoin', balance: 0.2322, usdValue: 97376.16, icon: 'bitcoin.png' },
         { name: 'Tether', balance: 10, usdValue: 1, icon: 'tether.png' },
@@ -41,11 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleBalancesBtn = document.getElementById('toggleBalances');
     let showEmptyBalances = true;
 
-    // Функция для отображения криптовалют
     function renderCryptos() {
-        cryptoList.innerHTML = ''; // Очищаем список перед отрисовкой
+        cryptoList.innerHTML = '';
         cryptoData.forEach(crypto => {
-            if (!showEmptyBalances && crypto.balance === 0) return; // Пропускаем нулевые балансы, если они скрыты
+            if (!showEmptyBalances && crypto.balance === 0) return;
 
             const cryptoItem = document.createElement('div');
             cryptoItem.className = 'crypto-item';
@@ -69,28 +76,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Событие для переключения показа балансов
     toggleBalancesBtn.addEventListener('click', () => {
-        showEmptyBalances = !showEmptyBalances; // Переключаем состояние
+        showEmptyBalances = !showEmptyBalances;
         toggleBalancesBtn.innerHTML = showEmptyBalances
             ? 'Скрыть пустые балансы <i class="fa-solid fa-eye-slash"></i>'
             : 'Показать все <i class="fa-solid fa-eye"></i>';
-        renderCryptos(); // Перерисовываем список
+        renderCryptos();
     });
 
-    // Изначальная отрисовка
     renderCryptos();
-});
 
-
-document.addEventListener('DOMContentLoaded', () => {
+    // Табы
     const tabs = document.querySelectorAll('.tab-btn');
-
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
-            // Убираем активный класс у всех табов
             tabs.forEach(t => t.classList.remove('active'));
-            // Добавляем активный класс к текущему табу
             tab.classList.add('active');
         });
     });
