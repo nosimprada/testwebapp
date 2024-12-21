@@ -584,3 +584,72 @@ body {
 
 
 
+
+/* Заставка */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0d1b2a; /* Фон заставки */
+    display: flex;
+    flex-direction: column; /* Расположение элементов по вертикали */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2000; /* Поверх всего остального */
+}
+
+/* Анимация загрузки */
+.loader {
+    position: relative;
+    width: 100px; /* Размер контейнера */
+    height: 100px;
+    margin-bottom: 20px; /* Отступ снизу для текста */
+}
+
+/* Вращающийся круг */
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #ffffff; /* Белая обводка */
+    border-top: 10px solid #3fc1b0; /* Зеленая верхняя линия */
+    border-radius: 50%; /* Делаем круг */
+    animation: spin 1s linear infinite;
+}
+
+/* Статичное изображение */
+.loader-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрируем изображение */
+    width: 60px; /* Размер изображения */
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Анимация вращения */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Текст под заставкой */
+.preloader-text {
+    font-size: 14px; /* Размер текста */
+    color: #ffffff; /* Белый цвет текста */
+    margin-top: 10px; /* Отступ сверху */
+    max-width: 80%; /* Ограничение ширины */
+    line-height: 1.5; /* Межстрочный интервал */
+}
+
+
