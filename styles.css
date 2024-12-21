@@ -302,6 +302,74 @@ body {
     font-weight: bold;
 }
 
+/* Контейнер для валютных счетов */
+.currency-accounts-container {
+    padding-left: 15px; /* Отступ от левой границы */
+    padding-right: 15px;
+    margin-top: 0px;
+}
 
+/* Заголовок секции */
+.currency-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #3fc1b0;
+    margin-bottom: 10px;
+}
+
+/* Элементы валютных счетов */
+.currency-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    transition: background-color 0.2s ease;
+}
+
+.currency-item:hover {
+    background-color: rgba(63, 193, 176, 0.2);
+}
+
+/* Информация о валюте */
+.currency-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Зелёный круг с символом */
+.currency-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Размер круга */
+    height: 40px;
+    border-radius: 50%;
+    background-color: #04bd88; /* Зелёный цвет фона */
+    color: #ffffff; /* Тёмный цвет текста */
+    font-size: 30px; /* Размер символа */
+}
+
+/* Название валюты */
+.currency-name {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Сумма валюты */
+.currency-amount {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Текущий курс валюты */
+.currency-rate {
+    font-size: 14px; /* Размер текста для курса */
+    color: #82868a; /* Серый цвет текста */
+    margin-top: 2px; /* Отступ сверху */
+    font-weight: normal; /* Нормальный вес текста */
+}
 
 
