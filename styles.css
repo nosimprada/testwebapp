@@ -341,7 +341,6 @@ body {
     padding: 10px 0px;
     transition: background-color 0.2s ease;
     border-radius: 15px; /* Закруглённые углы */
-    cursor: pointer;
     z-index: 1; /* Для выделения над фоном */
 }
 
