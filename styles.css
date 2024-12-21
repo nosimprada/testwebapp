@@ -17,6 +17,7 @@ body {
     margin: 0 auto;
     padding: 10px;
     background-color: #282e33;
+    padding-bottom: 60px; /* Отступ снизу для нижнего бара */
 }
 
 
@@ -547,7 +548,6 @@ body {
     align-items: center;
     background: none;
     border: none;
-    cursor: pointer;
     color: #82868a; /* Серый текст для неактивной вкладки */
     font-size: 12px;
     transition: color 0.2s ease, transform 0.2s ease;
@@ -569,4 +569,18 @@ body {
 .tab-btn:active {
     transform: scale(0.95); /* Легкое уменьшение при нажатии */
 }
+
+
+.footer {
+    text-align: center; /* Центрируем текст */
+    font-size: 14px; /* Размер текста */
+    color: #ffffff; /* Белый цвет текста */
+    padding: 10px 0; /* Отступ сверху и снизу */
+}
+
+.footer p {
+    margin: 0; /* Убираем отступы */
+}
+
+
 
