@@ -317,24 +317,53 @@ body {
     margin-bottom: 10px;
 }
 
-/* Элементы валютных счетов */
-.currency-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 5px;
-    transition: background-color 0.2s ease;
+/* Контейнер для валютных счетов */
+.currency-accounts-container {
+    padding-left: 15px; /* Отступ от левой границы */
+    padding-right: 15px;
+    margin-top: 0px;
 }
 
-.currency-item:hover {
-    background-color: rgba(63, 193, 176, 0.2);
+/* Заголовок секции */
+.currency-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #3fc1b0;
+    margin-bottom: 10px;
 }
+
+/* Элементы валютных счетов */
+.currency-item {
+    position: relative; /* Для псевдоэлемента */
+    display: flex;
+    justify-content: space-between; /* Разделяем название и сумму */
+    align-items: center;
+    padding: 10px 0px;
+    transition: background-color 0.2s ease;
+    border-radius: 15px; /* Закруглённые углы */
+    cursor: pointer;
+    z-index: 1; /* Для выделения над фоном */
+}
+
+.currency-item:focus-within::before,
+.currency-item:hover::before {
+    content: ""; /* Пустой псевдоэлемент для выделения */
+    position: absolute;
+    top: 0;
+    left: -15px; /* Сдвиг влево, чтобы покрыть весь экран */
+    width: calc(100% + 30px); /* Учитываем сдвиг (2 * 15px) */
+    height: 100%; /* Полная высота элемента */
+    background-color: rgba(63, 193, 176, 0.2); /* Цвет выделения */
+    z-index: -1; /* Под контент */
+    border-radius: 15px; /* Закруглённые углы */
+}
+
 
 /* Информация о валюте */
 .currency-info {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /* Расстояние между кругом и текстом */
 }
 
 /* Зелёный круг с символом */
@@ -359,9 +388,11 @@ body {
 
 /* Сумма валюты */
 .currency-amount {
-    font-size: 16px;
-    color: #ffffff;
+    font-size: 18px; /* Размер текста для суммы */
+    color: #ffffff; /* Белый цвет суммы */
     font-weight: bold;
+    text-align: right; /* Выравнивание по правому краю */
+    align-self: flex-start; /* На одном уровне с названием */
 }
 
 /* Текущий курс валюты */
@@ -371,5 +402,12 @@ body {
     margin-top: 2px; /* Отступ сверху */
     font-weight: normal; /* Нормальный вес текста */
 }
+
+/* Детали валюты */
+.currency-details {
+    display: flex;
+    flex-direction: column; /* Название сверху, курс снизу */
+}
+
 
 
